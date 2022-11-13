@@ -253,3 +253,59 @@ a {
   src: url("TTNorms-Regular.eot");
   src: local("TT Norms Regular"), local("TTNorms-Regular"), url("../fonts/TTNorms-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Regular.woff2") format("woff2"), url("../fonts/TTNorms-Regular.woff") format("woff"), url("../fonts/TTNorms-Regular.ttf") format("truetype");
 }
+.page-header {
+  position: relative;
+}
+.page-header::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  content: "";
+
+  background-image: url(../img/bgletterP.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 89vh;
+}
+.page-header__grid {
+  position: absolute;
+}
+.page-header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background-color: #323264;
+}
+.page-header__content-title {
+  position: absolute;
+  z-index: 1;
+
+  max-width: 630px;
+  margin: 0;
+  padding: 20px;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 45px;
+}
+.page-header__content-image {
+  -webkit-transform: translateY(28%);
+      -ms-transform: translateY(28%);
+          transform: translateY(28%);
+}

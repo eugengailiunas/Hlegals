@@ -1,0 +1,60 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.page-header {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url(../img/bgletterP.svg);
+    background-size: 89vh;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__grid {
+    position: absolute;
+
+    // display: none;
+  }
+
+  &__logo {}
+
+  &__menu {}
+
+  &__actions {}
+
+  &__content {
+    min-height: 100vh;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-title {
+      position: absolute;
+      margin: 0;
+      font-size: 38px;
+      line-height: 45px;
+      text-align: center;
+      font-weight: 500;
+
+      color: $color-white;
+      max-width: 630px;
+      padding: $gap;
+      z-index: 1;
+    }
+
+    &-image {
+      transform: translateY(28%);
+
+    }
+  }
+
+  &__button {}
+}
