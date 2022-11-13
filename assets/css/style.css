@@ -165,3 +165,91 @@ template {
 [hidden] {
   display: none;
 }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.2;
+}
+body.active {
+  overflow: hidden;
+
+  -webkit-transform: translateX(-170px);
+      -ms-transform: translateX(-170px);
+          transform: translateX(-170px);
+}
+body.active::before {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  content: "";
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none;
+
+  color: #24a3ff;
+}
+.container {
+  width: min(100% - 40px, 1320px);
+
+  margin-inline: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
+
+@font-face {
+  font-family: "TT Norms";
+  font-weight: bold;
+  font-style: normal;
+
+  src: url("TTNorms-Bold.eot");
+  src: local("TT Norms Bold"), local("TTNorms-Bold"), url("../fonts/TTNorms-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Bold.woff2") format("woff2"), url("../fonts/TTNorms-Bold.woff") format("woff"), url("../fonts/TTNorms-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TT Norms";
+  font-weight: 500;
+  font-style: normal;
+
+  src: url("TTNorms-Medium.eot");
+  src: local("TT Norms Medium"), local("TTNorms-Medium"), url("../fonts/TTNorms-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Medium.woff2") format("woff2"), url("../fonts/TTNorms-Medium.woff") format("woff"), url("../fonts/TTNorms-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TT Norms";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("TTNorms-Regular.eot");
+  src: local("TT Norms Regular"), local("TTNorms-Regular"), url("../fonts/TTNorms-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Regular.woff2") format("woff2"), url("../fonts/TTNorms-Regular.woff") format("woff"), url("../fonts/TTNorms-Regular.ttf") format("truetype");
+}
