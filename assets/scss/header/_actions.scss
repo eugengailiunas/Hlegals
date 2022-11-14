@@ -1,2 +1,42 @@
 @use "../presets" as *;
 @use "../mixins" as *;
+
+.actions {
+  display: flex;
+  gap: $gap;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__languages {
+    display: flex;
+
+    &-link {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: $color-white;
+      display: block;
+      padding: 5px;
+      border-radius: 8px;
+
+      &.-active {
+        background-color: $color-accent;
+      }
+    }
+
+  }
+
+  &__locations {
+
+    &-link {
+      color: $color-white;
+    }
+  }
+
+  &__phones {
+    &-link {
+      font-weight: 700;
+      color: $color-white;
+    }
+  }
+}

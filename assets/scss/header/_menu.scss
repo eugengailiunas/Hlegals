@@ -1,3 +1,28 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.menu {
+  &__btn {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    gap: $gap-md;
+    justify-content: flex-end;
+    @include unlist;
+  }
+
+  &__item {}
+
+  &__link {
+    font-size: 18px;
+    color: $color-white;
+  }
+}
+
+
+
 // .menu__btn {
 //   position: relative;
 

@@ -3,33 +3,57 @@
 
 .page-header {
   position: relative;
+  background: $bg-gradient-soft;
 
   &::before {
     content: "";
     background-image: url(../img/bgletterP.svg);
-    background-size: 89vh;
+    background-size: 85vh;
     background-repeat: no-repeat;
     background-position: 50% 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    z-index: 1;
+
+    @include abs-position;
+  }
+
+  &::after {
+    content: "";
+    background: linear-gradient(to top, $color-primary 0%, transparent 100%);
+    @include abs-position(70%);
+    z-index: 1;
   }
 
   &__grid {
     position: absolute;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "logo actions" "logo menu";
+    gap: $gap;
+    padding-top: 50px;
 
-    // display: none;
+    @extend %container;
   }
 
-  &__logo {}
+  &__logo {
+    grid-area: logo;
+  }
 
-  &__menu {}
+  &__menu {
+    grid-area: menu;
+  }
 
-  &__actions {}
+  &__actions {
+    grid-area: actions;
+  }
 
   &__content {
+    position: relative;
+
     min-height: 100vh;
     background-color: $color-primary;
     display: flex;
@@ -37,7 +61,8 @@
     justify-content: center;
 
     &-title {
-      position: absolute;
+      position: relative;
+      z-index: 2;
       margin: 0;
       font-size: 38px;
       line-height: 45px;
@@ -45,16 +70,22 @@
       font-weight: 500;
 
       color: $color-white;
-      max-width: 630px;
+      max-width: 640px;
       padding: $gap;
-      z-index: 1;
     }
 
     &-image {
-      transform: translateY(28%);
+      position: absolute;
+      height: 63vh;
+      bottom: 0;
+      z-index: 1;
 
     }
   }
 
-  &__button {}
+  &__button {
+    position: absolute;
+
+    display: none;
+  }
 }
