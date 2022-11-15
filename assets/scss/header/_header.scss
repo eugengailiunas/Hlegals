@@ -15,6 +15,10 @@
     z-index: 1;
 
     @include abs-position;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &::after {
@@ -32,9 +36,19 @@
     right: 0;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas: "logo actions" "logo menu";
+
     gap: $gap;
-    padding-top: 50px;
+
+
+    @include md-min {
+      grid-template-areas: "logo actions" "logo menu";
+      padding-top: 50px;
+    }
+
+    @include md {
+      grid-template-areas: "actions actions" "logo menu";
+      padding-top: $gap;
+    }
 
     @extend %container;
   }
@@ -55,7 +69,6 @@
     position: relative;
 
     min-height: 100vh;
-    background-color: $color-primary;
     display: flex;
     align-items: center;
     justify-content: center;

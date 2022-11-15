@@ -4,8 +4,18 @@
 .actions {
   display: flex;
   gap: $gap;
-  justify-content: flex-end;
   align-items: center;
+
+
+  @include md-min {
+    color: $color-white;
+    justify-content: flex-end;
+  }
+
+  @include md {
+    justify-content: space-between;
+    color: $color-gray-bg-text;
+  }
 
   &__languages {
     display: flex;
@@ -14,29 +24,41 @@
       font-weight: 700;
       font-size: 12px;
       letter-spacing: 1px;
-      color: $color-white;
+      color: inherit;
       display: block;
       padding: 5px;
       border-radius: 8px;
 
       &.-active {
         background-color: $color-accent;
+        color: $color-white;
       }
     }
 
   }
 
   &__locations {
+    font-style: normal;
+
+    @include md {
+      display: none;
+    }
 
     &-link {
-      color: $color-white;
+      color: inherit;
     }
   }
 
   &__phones {
     &-link {
       font-weight: 700;
-      color: $color-white;
+      color: inherit;
+    }
+  }
+
+  &__socials {
+    @include md {
+      display: none;
     }
   }
 }

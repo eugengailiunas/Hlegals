@@ -3,7 +3,62 @@
 
 .menu {
   &__btn {
-    display: none;
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    margin: 25px 0 25px auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    @include md-min {
+      display: none;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: $color-white;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+
+      &:nth-child(2) {
+        top: 9px;
+        transform-origin: left center;
+      }
+
+      &:nth-child(3) {
+        top: 18px;
+        transform-origin: left center;
+      }
+    }
+
+    &.active span:nth-child(1) {
+      transform: rotate(45deg);
+      top: -1.5px;
+      left: 4px;
+    }
+
+    &.active span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 19.5px;
+      left: 4px;
+    }
   }
 
   &__list {
@@ -11,6 +66,22 @@
     gap: $gap-md;
     justify-content: flex-end;
     @include unlist;
+
+    @include md {
+      display: none;
+
+      position: absolute;
+      top: 0;
+      background-color: $color-primary;
+      right: calc(-170px - 20px);
+      width: $mobile-menu-size;
+      height: 100vh;
+      padding: $gap;
+    }
+
+    &.active {
+      display: block;
+    }
   }
 
   &__item {}
@@ -20,65 +91,3 @@
     color: $color-white;
   }
 }
-
-
-
-// .menu__btn {
-//   position: relative;
-
-//   width: 40px;
-//   height: 30px;
-
-//   cursor: pointer;
-
-//   @include xl-min {
-//     display: none;
-//   }
-
-//   span {
-//     position: absolute;
-//     left: 0;
-
-//     display: block;
-
-//     width: 100%;
-//     height: 5px;
-
-//     transition: 0.25s ease-in-out;
-//     transform: rotate(0deg);
-
-//     opacity: 1;
-//     border-radius: 5px;
-//     background-color: $color-accent;
-
-//     &:nth-of-type(1) {
-//       top: 0;
-//     }
-
-//     &:nth-of-type(2) {
-//       top: 12px;
-//     }
-
-//     &:nth-of-type(3) {
-//       top: 24px;
-//     }
-//   }
-
-//   &.active span {
-//     &:nth-of-type(1) {
-//       top: 12px;
-//       transform: rotate(135deg);
-//     }
-
-//     &:nth-of-type(2) {
-//       left: -40px;
-
-//       opacity: 0;
-//     }
-
-//     &:nth-of-type(3) {
-//       top: 12px;
-//       transform: rotate(-135deg);
-//     }
-//   }
-// }
