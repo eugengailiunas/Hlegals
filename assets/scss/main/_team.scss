@@ -1,0 +1,137 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__content {
+    background-color: $color-gray-bg;
+    border-radius: 15px;
+    display: grid;
+
+
+    @include xl-min {
+      grid-template-areas: "pic link" "pic title" "pic dsc";
+      grid-template-rows: 0.5fr 4fr 3fr;
+      gap: 0 $gap-lg;
+    }
+
+    @include xl-lg {
+      grid-template-areas: "pic link" "pic title" "pic dsc";
+      grid-template-rows: 0.25fr 3fr 0.5fr;
+      ;
+      gap: 0 $gap-lg;
+    }
+
+    @include lg-md {
+      padding: $gap;
+      grid-template-areas: "link" "title" "pic" "dsc";
+      gap: $gap;
+      padding: 1em;
+    }
+
+    @include md {
+      grid-template-areas: "link link" "title title" "pic dsc";
+      gap: $gap $gap;
+      padding: 1em;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+
+    max-width: 821px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+
+    background: $bg-gradient-red-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  &__link-team {
+    grid-area: link;
+    padding-top: 10px;
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 60px;
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+      padding-right: 20px;
+      background-image: url(../../img/link-arrow.svg);
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  &__description {
+    grid-area: dsc;
+  }
+
+
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $color-gray-bg-text;
+  }
+
+  &__copyright {
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.38;
+    color: $color-gray-bg-text;
+  }
+
+  &__picture {
+    grid-area: pic;
+
+  }
+
+  &__image {
+    @include xl-min {
+      width: 100%;
+    }
+
+    @include xl-lg {
+      width: 100%;
+    }
+
+    @include lg-md {
+      width: 50%;
+    }
+
+    @include md-sm {
+      width: 65%;
+      height: 70%;
+      background-blend-mode: normal, multiply, normal;
+      border-radius: 120px;
+    }
+
+    @include sm {
+      width: 85%;
+      height: 90%;
+      background-blend-mode: normal, multiply, normal;
+      border-radius: 120px;
+    }
+  }
+}

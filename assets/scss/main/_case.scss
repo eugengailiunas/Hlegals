@@ -1,0 +1,214 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.case {
+  padding-bottom: 100px;
+
+  &__content {
+    border-radius: 12px;
+  }
+
+  &__grid {}
+}
+
+.grid {
+  display: grid;
+  gap: 1px;
+
+  @include lg-min {
+    grid-template-areas: "first first th th four" "snd snd th th four" "fif six six svn svn";
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-columns: 2.6fr 1fr 2fr 0.8fr 3.3fr;
+  }
+
+  @include lg-sm {
+    grid-template-areas: "first first" "snd th" "four fif" "six svn";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include sm {
+    grid-template-areas: "first" "snd" "th" "four" "fif" "six" "svn";
+  }
+
+  &__first {
+    padding: 1em;
+    grid-area: first;
+    background-color: $color-gray-bg;
+    border-radius: 12px 0 0 0;
+
+    &-title {
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-accent;
+
+      @include lg {
+        text-align: center;
+      }
+    }
+  }
+
+  &__second {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 1em;
+    grid-area: snd;
+    background-color: $color-gray-bg;
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    &-wrap {}
+
+    &-link {
+      padding: 0.5em;
+      margin-left: -0.5em;
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-gray-bg-text;
+    }
+
+  }
+
+  &__third {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em;
+    grid-area: th;
+    background-color: $color-gray-bg;
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    &-wrap {}
+
+    &-link {
+      padding: 0.5em;
+      margin-left: -0.5em;
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-gray-bg-text;
+    }
+  }
+
+  &__fourth {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em;
+    grid-area: four;
+    background-color: $color-gray-bg;
+
+    @include lg-min {
+      border-radius: 0 12px 0 0;
+    }
+
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    &-wrap {}
+
+    &-link {
+      padding: 0.5em;
+      margin-left: -0.5em;
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-gray-bg-text;
+    }
+  }
+
+  &__fifth {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em;
+    grid-area: fif;
+    background-color: $color-gray-bg;
+
+    @include lg-min {
+      border-radius: 0 0 0 12px;
+    }
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    &-wrap {}
+
+    &-link {
+      padding: 0.5em;
+      margin-left: -0.5em;
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-gray-bg-text;
+    }
+  }
+
+  &__sixth {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em;
+    grid-area: six;
+    background-color: $color-gray-bg;
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    &-wrap {}
+
+    &-link {
+      padding: 0.5em;
+      margin-left: -0.5em;
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-gray-bg-text;
+    }
+  }
+
+  &__seventh {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em;
+    grid-area: svn;
+    background-color: $color-gray-bg;
+    border-radius: 0 0 12px 0;
+
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    &-wrap {}
+
+    &-link {
+      padding: 0.5em;
+      margin-left: -0.5em;
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-gray-bg-text;
+    }
+  }
+}

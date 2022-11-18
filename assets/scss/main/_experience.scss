@@ -1,0 +1,169 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+$size: 16px;
+
+.experience {
+  background-color: $color-primary;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__container {
+    @extend %container;
+  }
+}
+
+.slider {
+  display: flex;
+  color: $color-white;
+
+
+  @include lg-min {
+    gap: 80px;
+  }
+
+  @include lg {
+    flex-direction: column;
+    gap: $gap;
+  }
+
+  &__headers {
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    @include lg-min {
+      &:after {
+        content: "";
+        position: absolute;
+        right: -42px;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background-color: $color-gray-bg-separator;
+      }
+    }
+  }
+
+  &__header {
+    color: $color-gray-bg-text;
+    user-select: none;
+    position: relative;
+    font-weight: 700;
+
+
+    @include lg-min {
+      font-size: 42px;
+      text-align: right;
+    }
+
+    @include lg {
+      display: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    &.active {
+      span {
+        @extend %text-liner-gradient;
+      }
+
+      @include lg-min {
+        &:after {
+          content: "";
+          position: absolute;
+          right: -42px;
+          top: 0;
+          width: 4px;
+          height: 100%;
+          background-color: $color-accent;
+          z-index: 1;
+        }
+      }
+
+      @include lg {
+        display: block;
+      }
+    }
+  }
+
+
+  &__notes {
+    flex-basis: 0;
+    flex-grow: 3;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__note {
+
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+
+    @include lg-min {
+      max-width: 600px;
+    }
+
+    &.active {
+      position: static;
+      z-index: inherit;
+      opacity: 1;
+    }
+
+    &-title {
+      font-weight: 500;
+      margin-bottom: 15px;
+
+      @include lg-min {
+        font-size: 32px;
+      }
+
+      @include lg {
+        font-size: 22px;
+      }
+    }
+
+    &-description {
+
+      line-height: 1.43;
+
+      @include lg-min {
+        font-size: 21px;
+      }
+
+      @include lg {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+
+    @include lg-min {
+      display: none;
+    }
+  }
+
+  &__indncator {
+    width: $size;
+    height: $size;
+    border-radius: $size * 0.5;
+    opacity: 0.2;
+    background-color: $color-active;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+}

@@ -4,22 +4,21 @@
 .page-header {
   position: relative;
   background: $bg-gradient-soft;
+  overflow-x: hidden;
+  max-width: 100%;
 
-  &::before {
-    content: "";
-    background-image: url(../img/bgletterP.svg);
-    background-size: 85vh;
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    position: absolute;
-    z-index: 1;
-
-    @include abs-position;
-
-    @include sm {
-      display: none;
+  @include lg-min {
+    &::before {
+      content: "";
+      background-image: url(../img/bgletterP.svg);
+      background-size: 85vh;
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+      @include abs-position;
     }
   }
+
+
 
   &::after {
     content: "";
@@ -89,16 +88,24 @@
 
     &-image {
       position: absolute;
-      height: 63vh;
       bottom: 0;
       z-index: 1;
+
+      @include lg-min {
+        height: 63vh;
+      }
+
+      @include lg {
+        height: 67vh;
+      }
 
     }
   }
 
   &__button {
-    position: absolute;
-
-    display: none;
+    display: flex;
+    justify-content: center;
+    opacity: 5;
+    z-index: 3;
   }
 }
