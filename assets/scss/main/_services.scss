@@ -1,0 +1,78 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.services {
+  position: relative;
+  background: linear-gradient(218.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0px 0px 12px 12px;
+  padding-bottom: 80px;
+
+
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    left: 40px;
+    height: 20px;
+    border-radius: 0 0 12px 12px;
+    background-color: $color-gray-bg-separator;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    left: 20px;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    background-color: $color-gray-bg-text;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-white;
+
+    opacity: 0.5;
+  }
+
+  &__title {
+    padding-top: 5px;
+    margin-bottom: 45px;
+    font-size: 42px;
+    line-height: 1.2;
+    -webkit-text-fill-color: transparent;
+
+
+    span {
+      background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+      -webkit-background-clip: text;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+
+    @include md-min {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 60px $gap-lg;
+    }
+
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
+      gap: 50px $gap-lg;
+    }
+
+    @include sm {
+      align-items: flex-start;
+      gap: $gap-lg;
+    }
+  }
+}

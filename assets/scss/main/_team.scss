@@ -1,6 +1,7 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
+
 .team {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -20,7 +21,6 @@
     @include xl-lg {
       grid-template-areas: "pic link" "pic title" "pic dsc";
       grid-template-rows: 0.25fr 3fr 0.5fr;
-      ;
       gap: 0 $gap-lg;
     }
 
@@ -60,24 +60,22 @@
 
   &__link {
     position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 1px;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 60px;
-      bottom: 0;
-      width: 10px;
-      height: 10px;
-      padding-right: 20px;
-      background-image: url(../../img/link-arrow.svg);
-      background-repeat: no-repeat;
-    }
-
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 105%;
+    top: 100%;
+    background: url(../../img/link-arrow.svg);
   }
 
   &__description {
@@ -132,6 +130,26 @@
       height: 90%;
       background-blend-mode: normal, multiply, normal;
       border-radius: 120px;
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding-top: 20px;
+
+  }
+
+  &__indncator {
+    width: 16px;
+    height: 16px;
+    border-radius: 16px * 0.5;
+    opacity: 0.2;
+    background-color: $color-active;
+
+    &.active {
+      opacity: 1;
     }
   }
 }
