@@ -1,0 +1,102 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.companies {
+  padding-bottom: 40px;
+
+  &__container {
+    padding: 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-primary;
+  }
+
+  &__grid {
+    display: grid;
+
+    @include lg-min {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 120px;
+    }
+
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 120px;
+    }
+
+    @include md-xx {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 90px;
+    }
+
+    @include xx {
+      grid-auto-rows: 90px;
+    }
+  }
+
+  &__item {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--hillel {
+      background: #1c4280;
+    }
+
+    &--wannabiz {
+      background: #013748;
+    }
+
+    &--tapgerine {
+      background: #ff8400;
+    }
+
+    &--3dlook {
+      background: #aa47c9;
+    }
+
+    &--orange {
+      background: #ff8c09;
+    }
+
+    &--adteligent {
+      background: #e2e2e4;
+    }
+
+    &--clickky {
+      background: #d9002f;
+    }
+
+    &--ecolease {
+      background: #d6f4fa;
+    }
+
+    &--infratek {
+      background: #eaeaea;
+    }
+
+    &--citypark {
+      background: #292242;
+    }
+
+    &--artprint {
+      background: #05466b;
+    }
+
+    &--ultimate {
+      background: $color-black;
+    }
+  }
+
+  &__link {}
+
+  &__image {}
+}

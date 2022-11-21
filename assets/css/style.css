@@ -606,7 +606,7 @@ a {
 }
 
 .case {
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 .case__content {
   border-radius: 12px;
@@ -1063,6 +1063,77 @@ a {
 
   line-height: 1.44;
 }
+
+.companies {
+  padding-bottom: 40px;
+}
+.companies__container {
+  padding: 0;
+}
+.companies__title {
+  margin-bottom: 30px;
+
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #323264;
+
+  font-size: 14px;
+  line-height: 1.2;
+}
+.companies__grid {
+  display: grid;
+}
+.companies__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  background-color: bisque;
+}
+.companies__item--hillel {
+  background: #1c4280;
+}
+.companies__item--wannabiz {
+  background: #013748;
+}
+.companies__item--tapgerine {
+  background: #ff8400;
+}
+.companies__item--3dlook {
+  background: #aa47c9;
+}
+.companies__item--orange {
+  background: #ff8c09;
+}
+.companies__item--adteligent {
+  background: #e2e2e4;
+}
+.companies__item--clickky {
+  background: #d9002f;
+}
+.companies__item--ecolease {
+  background: #d6f4fa;
+}
+.companies__item--infratek {
+  background: #eaeaea;
+}
+.companies__item--citypark {
+  background: #292242;
+}
+.companies__item--artprint {
+  background: #05466b;
+}
+.companies__item--ultimate {
+  background: #000000;
+}
 @media (min-width: 576px) {
   .item-services {
     gap: 20px;
@@ -1178,6 +1249,10 @@ a {
   .slider__indicators {
     display: none;
   }
+  .companies__grid {
+    grid-auto-rows: 120px;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @media (min-width: 1200px) {
   .team__content {
@@ -1249,6 +1324,10 @@ a {
   .team__image {
     width: 50%;
   }
+  .companies__grid {
+    grid-auto-rows: 120px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media (max-width: 767.8px) {
   .page-header__grid {
@@ -1287,6 +1366,12 @@ a {
 
     gap: 20px 20px;
     grid-template-areas: "link link" "title title" "pic dsc";
+  }
+}
+@media (max-width: 767.8px) and (min-width: 420px) {
+  .companies__grid {
+    grid-auto-rows: 90px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -1354,5 +1439,10 @@ a {
   }
   .item-services__description {
     font-size: 16px;
+  }
+}
+@media (max-width: 419.8px) {
+  .companies__grid {
+    grid-auto-rows: 90px;
   }
 }
