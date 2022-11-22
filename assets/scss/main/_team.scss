@@ -118,20 +118,18 @@
       width: 50%;
     }
 
-    @include md-sm {
-      width: 65%;
-      height: 70%;
-      background-blend-mode: normal, multiply, normal;
-      border-radius: 120px;
+    @include md {
+      display: none;
     }
 
-    @include sm {
-      width: 85%;
-      height: 90%;
-      background-blend-mode: normal, multiply, normal;
-      border-radius: 120px;
+    &-min {
+      @include md-min {
+        display: none;
+      }
     }
   }
+
+
 
   &__indicators {
     display: flex;
