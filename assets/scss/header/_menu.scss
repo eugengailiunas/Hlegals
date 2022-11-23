@@ -11,6 +11,7 @@
     transition: .5s ease-in-out;
     cursor: pointer;
 
+
     @include md-min {
       display: none;
     }
@@ -59,6 +60,7 @@
       top: 19.5px;
       left: 4px;
     }
+
   }
 
   &__list {
@@ -82,9 +84,16 @@
     &.active {
       display: block;
     }
+
+
   }
 
-  &__item {}
+  &__item {
+
+    &--active {
+      border-bottom: 1px solid $color-white;
+    }
+  }
 
   &__link {
     font-size: 18px;

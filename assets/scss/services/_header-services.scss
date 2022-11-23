@@ -1,0 +1,109 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.page-header {
+
+  &--alt {
+    min-height: 200px;
+    background: none;
+    background-color: $color-primary;
+
+
+    @include lg-min {
+      &::before {
+        bottom: 100%;
+
+        content: "";
+
+        background: none;
+      }
+    }
+
+
+
+    &::after {
+      top: 100%;
+
+      content: "";
+
+      background: none;
+    }
+  }
+
+
+  &__logo {
+    &--secondary {
+      display: flex;
+      gap: $gap;
+
+      @include sm {
+        align-items: center;
+      }
+    }
+
+    &-image {
+      @include sm {
+        display: none;
+      }
+    }
+
+    &-img {
+      @include sm-min {
+        display: none;
+      }
+    }
+
+    &-title {
+      position: relative;
+      line-height: 1.2;
+      color: $color-white;
+
+      @include sm-min {
+        font-size: 38px;
+      }
+
+      @include sm {
+        font-size: 19px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../../img/slash-logo.svg);
+        background-position: center;
+        background-size: contain;
+        height: 100px;
+        width: 100px;
+        margin-left: 20px;
+      }
+
+      &::before {
+        content: "/";
+        position: absolute;
+        left: 50%;
+        color: $color-accent;
+        height: 30px;
+        width: 10px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+
+  &__grid {
+
+    &--alt {
+      @include lg-min {
+        grid-template-areas: "logo actions" "logo menu";
+        padding-top: 50px;
+      }
+
+      @include lg {
+        grid-template-areas: "actions actions" "logo menu";
+        padding-top: $gap;
+      }
+
+      @extend %container;
+    }
+  }
+}

@@ -2,10 +2,10 @@
 @use "../mixins" as *;
 
 .companies {
-  padding-bottom: 40px;
+
 
   &__container {
-    padding: 0;
+    width: min(100%);
   }
 
   &__title {

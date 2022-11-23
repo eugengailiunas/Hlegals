@@ -46,9 +46,16 @@
   &__title {
     padding-top: 5px;
     margin-bottom: 45px;
-    font-size: 42px;
     line-height: 1.2;
     -webkit-text-fill-color: transparent;
+
+    @include lg-min {
+      font-size: 42px;
+    }
+
+    @include lg {
+      font-size: 32px;
+    }
 
 
     span {

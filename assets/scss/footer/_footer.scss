@@ -2,7 +2,6 @@
 @use "../mixins" as *;
 
 .page-footer {
-  padding-top: 20px;
   padding-bottom: 20px;
   background: $color-gray-bg;
 
@@ -14,6 +13,10 @@
     border-top: 4px solid $color-gray-bg-separator;
     display: flex;
     padding-top: 20px;
+
+    &--alt {
+      border: none;
+    }
 
     @include md-min {
       justify-content: space-between;

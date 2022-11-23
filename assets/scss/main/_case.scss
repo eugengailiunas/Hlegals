@@ -4,6 +4,10 @@
 .case {
   padding-bottom: 30px;
 
+  &--alt {
+    padding-top: 100px;
+  }
+
   &__content {
     border-radius: 12px;
   }
@@ -34,7 +38,15 @@
     padding: 1em;
     grid-area: first;
     background-color: $color-gray-bg;
-    border-radius: 12px 0 0 0;
+
+
+    @include lg-min {
+      border-radius: 12px 0 0 0;
+    }
+
+    @include lg {
+      border-radius: 12px 12px 0 0;
+    }
 
     &-title {
       font-size: 14px;
@@ -63,6 +75,15 @@
       justify-content: center;
       margin-bottom: 20px;
       color: $color-primary-soft;
+      line-height: 1.2;
+
+      @include md-min {
+        font-size: 24px;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
     }
 
     &-wrap {}
@@ -90,6 +111,16 @@
       justify-content: center;
       margin-bottom: 20px;
       color: $color-primary-soft;
+      line-height: 1.2;
+
+      @include md-min {
+        font-size: 24px;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
+
     }
 
     &-wrap {}
@@ -121,6 +152,15 @@
       justify-content: center;
       margin-bottom: 20px;
       color: $color-primary-soft;
+      line-height: 1.2;
+
+      @include md-min {
+        font-size: 24px;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
     }
 
     &-wrap {}
@@ -151,6 +191,15 @@
       justify-content: center;
       margin-bottom: 20px;
       color: $color-primary-soft;
+      line-height: 1.2;
+
+      @include md-min {
+        font-size: 24px;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
     }
 
     &-wrap {}
@@ -172,11 +221,29 @@
     grid-area: six;
     background-color: $color-gray-bg;
 
+    @include lg-sm {
+      border-radius: 0 0 0 12px;
+    }
+
     &-title {
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
       color: $color-primary-soft;
+      line-height: 1.2;
+
+      @include md-min {
+        font-size: 24px;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
+
+      @include sm {
+        display: flex;
+        justify-content: flex-start;
+      }
     }
 
     &-wrap {}
@@ -197,7 +264,14 @@
     padding: 1em;
     grid-area: svn;
     background-color: $color-gray-bg;
-    border-radius: 0 0 12px 0;
+
+    @include sm-min {
+      border-radius: 0 0 12px 0;
+    }
+
+    @include sm {
+      border-radius: 0 0 12px 12px;
+    }
 
 
     &-title {
@@ -205,6 +279,15 @@
       justify-content: center;
       margin-bottom: 20px;
       color: $color-primary-soft;
+      line-height: 1.2;
+
+      @include md-min {
+        font-size: 24px;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
     }
 
     &-wrap {}

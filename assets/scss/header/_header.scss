@@ -27,6 +27,9 @@
     z-index: 1;
   }
 
+
+
+
   &__grid {
     position: absolute;
     z-index: 7;
@@ -50,6 +53,8 @@
     }
 
     @extend %container;
+
+
   }
 
   &__logo {
@@ -84,6 +89,8 @@
       color: $color-white;
       max-width: 640px;
       padding: $gap;
+
+
     }
 
     &-image {
@@ -103,8 +110,10 @@
   }
 
   &__button {
-    display: flex;
-    justify-content: center;
-    z-index: 2;
+    position: absolute;
+    left: 49%;
+    bottom: 8%;
+    z-index: 5;
+    cursor: pointer;
   }
 }
