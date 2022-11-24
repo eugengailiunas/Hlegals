@@ -317,6 +317,13 @@ li :hover {
   grid-template-columns: auto 1fr;
 }
 .page-header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+
   grid-area: logo;
 }
 .page-header__menu {
@@ -1543,7 +1550,7 @@ li :hover {
   .page-header__logo-title::before {
     position: absolute;
     right: 89%;
-    bottom: -40%;
+    bottom: -130%;
 
     width: 61px;
     height: 155px;
