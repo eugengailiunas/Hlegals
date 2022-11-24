@@ -2,17 +2,11 @@
 @use "../mixins" as *;
 
 .menu {
-
-  &-alt {}
-
   &__btn {
-
     &--alt {
-
       @include lg-min {
         display: none;
       }
-
       @include lg {
         display: block;
       }
@@ -20,12 +14,10 @@
   }
 
   &__list {
-
     &--alt {
       @include lg {
         display: none;
       }
-
     }
   }
 }

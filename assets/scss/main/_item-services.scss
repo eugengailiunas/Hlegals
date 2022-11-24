@@ -4,12 +4,11 @@
 .item-services {
   display: flex;
   flex-direction: column;
-  gap: $gap;
 
+  gap: $gap;
   @include sm-min {
     gap: $gap;
   }
-
   @include sm {
     gap: $gap-sm;
   }
@@ -19,50 +18,52 @@
 
     @include sm-min {
       flex-direction: column-reverse;
+
       gap: $gap;
     }
-
     @include sm {
-      flex-direction: row;
       align-items: center;
+      flex-direction: row;
       flex-grow: 1;
       flex-shrink: 2;
+
       gap: $gap;
     }
   }
 
   &__title {
-    font-weight: 500;
-    color: $color-active;
     flex-grow: 1;
     flex-shrink: 2;
+
+    color: $color-active;
+
+    font-weight: 500;
 
     @include sm-min {
       font-size: 24px;
       line-height: 28px;
     }
-
     @include sm {
-      font-size: 22px;
-      line-height: 26px;
-      order: 1;
       justify-content: center;
-    }
+      order: 1;
 
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
-  &__picture {}
 
-  &__image {}
+
+
 
   &__description {
-    line-height: 1.44;
     color: $color-white;
+
+    line-height: 1.44;
 
     @include sm-min {
       font-size: 18px;
     }
-
     @include sm {
       font-size: 16px;
     }

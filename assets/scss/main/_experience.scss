@@ -1,12 +1,13 @@
 @use "../presets" as *;
 @use "../mixins" as *;
-
 $size: 16px;
 
 .experience {
-  background-color: $color-primary;
+  margin-top: -1px;
   padding-top: 80px;
   padding-bottom: 80px;
+
+  background-color: $color-primary;
 
   &__container {
     @extend %container;
@@ -15,96 +16,103 @@ $size: 16px;
 
 .slider {
   display: flex;
-  color: $color-white;
 
+  color: $color-white;
 
   @include lg-min {
     gap: 80px;
   }
-
   @include lg {
     flex-direction: column;
+
     gap: $gap;
   }
 
   &__headers {
     position: relative;
-    flex-basis: 0;
-    flex-grow: 2;
 
     display: flex;
+    flex-basis: 0;
     flex-direction: column;
-    gap: $gap;
+    flex-grow: 2;
 
+    gap: $gap;
     @include lg-min {
       &:after {
-        content: "";
         position: absolute;
-        right: -42px;
         top: 0;
-        height: 100%;
+        right: -42px;
+
         width: 4px;
+        height: 100%;
+
+        content: "";
+
         background-color: $color-gray-bg-separator;
       }
     }
   }
 
   &__header {
-    color: $color-gray-bg-text;
-    user-select: none;
     position: relative;
+
+    user-select: none;
+
+    color: $color-gray-bg-text;
+
     font-weight: 700;
 
-
     @include lg-min {
-      font-size: 42px;
       text-align: right;
-    }
 
+      font-size: 42px;
+    }
     @include lg {
       display: none;
-      font-size: 14px;
-      text-transform: uppercase;
+
       letter-spacing: 1px;
+      text-transform: uppercase;
+
+      font-size: 14px;
     }
 
     &.active {
-      span {
-        @extend %text-liner-gradient;
-      }
-
       @include lg-min {
         &:after {
-          content: "";
           position: absolute;
-          right: -42px;
+          z-index: 1;
           top: 0;
+          right: -42px;
+
           width: 4px;
           height: 100%;
+
+          content: "";
+
           background-color: $color-accent;
-          z-index: 1;
         }
       }
-
       @include lg {
         display: block;
+      }
+      span {
+        @extend %text-liner-gradient;
       }
     }
   }
 
 
   &__notes {
-    flex-basis: 0;
-    flex-grow: 3;
-
     display: flex;
     align-items: center;
+    flex-basis: 0;
+    flex-grow: 3;
   }
 
   &__note {
-
     position: absolute;
     z-index: -9999;
+
     opacity: 0;
 
     @include lg-min {
@@ -114,30 +122,29 @@ $size: 16px;
     &.active {
       position: static;
       z-index: inherit;
+
       opacity: 1;
     }
 
     &-title {
-      font-weight: 500;
       margin-bottom: 15px;
+
+      font-weight: 500;
 
       @include lg-min {
         font-size: 32px;
       }
-
       @include lg {
         font-size: 22px;
       }
     }
 
     &-description {
-
       line-height: 1.43;
 
       @include lg-min {
         font-size: 21px;
       }
-
       @include lg {
         font-size: 18px;
       }
@@ -147,8 +154,8 @@ $size: 16px;
   &__indicators {
     display: flex;
     justify-content: center;
-    gap: 14px;
 
+    gap: 14px;
     @include lg-min {
       display: none;
     }
@@ -157,13 +164,13 @@ $size: 16px;
   &__indncator {
     width: $size;
     height: $size;
-    border-radius: $size * 0.5;
+
     opacity: 0.2;
+    border-radius: $size * 0.5;
     background-color: $color-active;
 
     &.active {
       opacity: 1;
     }
   }
-
 }

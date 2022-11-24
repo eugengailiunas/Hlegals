@@ -3,17 +3,22 @@
 
 .page-header {
   position: relative;
-  background: $bg-gradient-soft;
+
   overflow-x: hidden;
+
   max-width: 100%;
+
+  background: $bg-gradient-soft;
 
   @include lg-min {
     &::before {
       content: "";
+
       background-image: url(../img/bgletterP.svg);
-      background-size: 85vh;
       background-repeat: no-repeat;
       background-position: 50% 100%;
+      background-size: 85vh;
+
       @include abs-position;
     }
   }
@@ -21,10 +26,13 @@
 
 
   &::after {
-    content: "";
-    background: linear-gradient(to top, $color-primary 0%, transparent 100%);
-    @include abs-position(70%);
     z-index: 1;
+
+    content: "";
+
+    background: linear-gradient(to top, $color-primary 0%, transparent 100%);
+
+    @include abs-position(70%);
   }
 
 
@@ -34,27 +42,24 @@
     position: absolute;
     z-index: 7;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
+
     display: grid;
-    grid-template-columns: auto 1fr;
-
-    gap: $gap;
-
-
-    @include md-min {
-      grid-template-areas: "logo actions" "logo menu";
-      padding-top: 50px;
-    }
-
-    @include md {
-      grid-template-areas: "actions actions" "logo menu";
-      padding-top: $gap;
-    }
 
     @extend %container;
+    gap: $gap;
+    grid-template-columns: auto 1fr;
+    @include md-min {
+      padding-top: 50px;
 
+      grid-template-areas: "logo actions" "logo menu";
+    }
+    @include md {
+      padding-top: $gap;
 
+      grid-template-areas: "actions actions" "logo menu";
+    }
   }
 
   &__logo {
@@ -72,48 +77,51 @@
   &__content {
     position: relative;
 
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    min-height: 100vh;
+
     &-title {
       position: relative;
       z-index: 2;
-      margin: 0;
-      font-size: 38px;
-      line-height: 45px;
-      text-align: center;
-      font-weight: 500;
 
-      color: $color-white;
       max-width: 640px;
+      margin: 0;
       padding: $gap;
 
+      text-align: center;
 
+      color: $color-white;
+
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 45px;
     }
 
     &-image {
       position: absolute;
-      bottom: 0;
       z-index: 1;
+      bottom: 0;
 
       @include lg-min {
         height: 63vh;
+        margin-bottom: 1px;
       }
-
       @include lg {
         height: 67vh;
+        margin-bottom: 1px;
       }
-
     }
   }
 
   &__button {
     position: absolute;
-    left: 49%;
-    bottom: 8%;
     z-index: 5;
+    bottom: 8%;
+    left: 49%;
+
     cursor: pointer;
   }
 }

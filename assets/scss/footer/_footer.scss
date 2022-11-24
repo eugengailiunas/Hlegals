@@ -3,29 +3,34 @@
 
 .page-footer {
   padding-bottom: 20px;
+
   background: $color-gray-bg;
+
+
 
   &__container {
     @extend %container;
   }
 
   &__content {
-    border-top: 4px solid $color-gray-bg-separator;
     display: flex;
-    padding-top: 20px;
 
-    &--alt {
-      border: none;
-    }
+    padding-top: 30px;
+
+    border-top: 4px solid $color-gray-bg-separator;
 
     @include md-min {
       justify-content: space-between;
     }
-
     @include md {
       flex-direction: column;
       justify-content: center;
+
       gap: $gap;
+    }
+
+    &--alt {
+      border: none;
     }
   }
 
@@ -34,13 +39,12 @@
     justify-content: center;
 
     @include md-min {
+      gap: $gap;
       grid-template-areas: "loc loc map" "soc phon email";
-      gap: $gap;
     }
-
     @include md {
-      grid-template-areas: "loc" "map" "soc" "phon" "email";
       gap: $gap;
+      grid-template-areas: "loc" "map" "soc" "phon" "email";
     }
   }
 
@@ -48,38 +52,39 @@
     grid-area: loc;
 
     &-link {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.2;
       color: $color-primary;
+
+      font-size: 16px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1.2;
 
       @include md {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
       }
     }
-
   }
 
   &__map {
     grid-area: map;
 
     &-link {
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 14px;
       letter-spacing: 1px;
       text-transform: uppercase;
+
       color: $color-active;
+
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
 
       @include md {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
       }
-
     }
   }
 
@@ -89,62 +94,61 @@
     &-link {
       @include md {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
       }
-
     }
   }
 
   &__phones {
-    grid-area: phon;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    grid-area: phon;
 
     &-link {
-
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 1.2;
       /* identical to box height */
-
       text-align: right;
+
       color: $color-primary-alt;
+
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.2;
     }
   }
 
   &__email {
-    grid-area: email;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    grid-area: email;
 
     &-link {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 19px;
       /* identical to box height */
-
-
       /* Active / Regular */
-
       color: $color-active;
+
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19px;
     }
   }
 
   &__copyright {
     &-text {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.2;
       color: $color-gray-bg-text;
+
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.2;
 
       @include md-min {
         text-align: right;
       }
-
       @include md {
         text-align: center;
       }

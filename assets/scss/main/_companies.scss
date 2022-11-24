@@ -2,50 +2,49 @@
 @use "../mixins" as *;
 
 .companies {
-
-
   &__container {
     width: min(100%);
   }
 
   &__title {
     margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 1.2;
+
+    text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-align: center;
+
     color: $color-primary;
+
+    font-size: 14px;
+    line-height: 1.2;
   }
 
   &__grid {
     display: grid;
 
     @include lg-min {
+      grid-auto-rows: 120px;
       grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 120px;
     }
-
     @include lg-md {
-      grid-template-columns: repeat(3, 1fr);
       grid-auto-rows: 120px;
+      grid-template-columns: repeat(3, 1fr);
     }
-
     @include md-xx {
-      grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: 90px;
+      grid-template-columns: repeat(2, 1fr);
     }
-
     @include xx {
       grid-auto-rows: 90px;
     }
   }
 
   &__item {
-    background-color: bisque;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    background-color: bisque;
 
     &--hillel {
       background: #1c4280;
@@ -95,8 +94,4 @@
       background: $color-black;
     }
   }
-
-  &__link {}
-
-  &__image {}
 }

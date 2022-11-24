@@ -2,12 +2,11 @@
 @use "../mixins" as *;
 
 .page-header {
-
   &--alt {
     min-height: 200px;
+
     background: none;
     background-color: $color-primary;
-
 
     @include lg-min {
       &::before {
@@ -34,8 +33,8 @@
   &__logo {
     &--secondary {
       display: flex;
-      gap: $gap;
 
+      gap: $gap;
       @include sm {
         align-items: center;
       }
@@ -55,55 +54,107 @@
 
     &-title {
       position: relative;
-      line-height: 1.2;
+
+      display: inline-block;
+
+      margin-left: 10px;
+
       color: $color-white;
+
+      line-height: 1.2;
 
       @include sm-min {
         font-size: 38px;
       }
-
       @include sm {
         font-size: 19px;
       }
+      @include sm-min {
+        &::after {
+          position: absolute;
+          top: -7%;
 
-      &::after {
-        content: "";
-        position: absolute;
-        background-image: url(../../img/slash-logo.svg);
-        background-position: center;
-        background-size: contain;
-        height: 100px;
-        width: 100px;
-        margin-left: 20px;
+          width: 59px;
+          height: 66px;
+          margin-left: 2px;
+
+          content: "";
+
+          background-image: url(../img/symbol-slash.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 40px;
+        }
       }
+      @include sm {
+        &::after {
+          position: absolute;
+          top: -20%;
 
-      &::before {
-        content: "/";
-        position: absolute;
-        left: 50%;
-        color: $color-accent;
-        height: 30px;
-        width: 10px;
-        margin-left: 20px;
+          width: 30px;
+          height: 33px;
+          margin-left: 2px;
+
+          content: "";
+
+          background-image: url(../img/symbol-slash.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 20px;
+        }
+      }
+      @include sm-min {
+        &::before {
+          position: absolute;
+          right: 89%;
+          bottom: -40%;
+
+          width: 61px;
+          height: 155px;
+
+          content: "";
+
+          background-image: url(../img/slash-slash.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 20px;
+        }
+      }
+      @include sm {
+        &::before {
+          position: absolute;
+          top: -122%;
+          right: 95%;
+
+          width: 32px;
+          height: 81px;
+          margin-left: 20px;
+
+          content: "";
+
+          background-image: url(../img/slash-slash.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 12px;
+        }
       }
     }
   }
 
 
   &__grid {
-
     &--alt {
-      @include lg-min {
-        grid-template-areas: "logo actions" "logo menu";
-        padding-top: 50px;
-      }
-
-      @include lg {
-        grid-template-areas: "actions actions" "logo menu";
-        padding-top: $gap;
-      }
-
       @extend %container;
+      @include lg-min {
+        padding-top: 50px;
+
+        grid-template-areas: "logo actions" "logo menu";
+      }
+      @include lg {
+        padding-top: $gap;
+
+        grid-template-areas: "actions actions" "logo menu";
+      }
     }
   }
 }
