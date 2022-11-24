@@ -1505,6 +1505,9 @@ li :hover {
 }
 
 @media (min-width: 576px) {
+  .page-header__logo-img {
+    display: none;
+  }
   .grid__seventh {
     border-radius: 0 0 12px 0;
   }
@@ -1997,6 +2000,9 @@ li :hover {
 }
 
 @media (max-width: 575.8px) {
+  .page-header__logo-image {
+    display: none;
+  }
   .grid {
     grid-template-areas: "first" "snd" "th" "four" "fif" "six" "svn";
   }

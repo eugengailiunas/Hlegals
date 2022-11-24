@@ -50,11 +50,13 @@
     @extend %container;
     gap: $gap;
     grid-template-columns: auto 1fr;
+
     @include md-min {
       padding-top: 50px;
 
       grid-template-areas: "logo actions" "logo menu";
     }
+
     @include md {
       padding-top: $gap;
 
@@ -67,6 +69,18 @@
     align-items: center;
 
     grid-area: logo;
+
+    &-image {
+      @include sm {
+        display: none;
+      }
+    }
+
+    &-img {
+      @include sm-min {
+        display: none;
+      }
+    }
   }
 
   &__menu {
@@ -112,6 +126,7 @@
         height: 63vh;
         margin-bottom: 1px;
       }
+
       @include lg {
         height: 67vh;
         margin-bottom: 1px;
