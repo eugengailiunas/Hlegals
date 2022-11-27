@@ -1,0 +1,115 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.flip {
+
+  &__container {
+    width: min(100% - 40px, 1095px);
+
+    margin-inline: auto;
+  }
+
+  &__wrap {
+    display: flex;
+    gap: $gap-lg;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    @include md-min {
+      flex-basis: 640px;
+    }
+  }
+
+  &__title {
+
+    line-height: 50px;
+
+    /* Gradient / Red Text */
+
+    background: $bg-gradient-red-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    @include md-min {
+      font-size: 42px;
+    }
+
+    @include md {
+      font-size: 32px;
+    }
+  }
+
+  &__description {
+    line-height: 1.43;
+
+    @include md-min {
+      font-size: 21px;
+    }
+
+    @include md {
+      font-size: 18px;
+    }
+
+  }
+
+  &__count {
+    flex-basis: 400px;
+
+    @include md {
+      border-top: 4px solid $color-gray-bg-alt;
+    }
+
+    &-wrap {
+
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @include md-min {
+        border-left: 4px solid $color-gray-bg-alt;
+      }
+
+      @include md {
+        padding-top: 15px;
+      }
+    }
+
+
+
+
+    &-content {
+      @include md-min {
+        margin-left: 20px;
+      }
+    }
+
+    &-header {
+      display: flex;
+      gap: $gap-sm;
+    }
+
+    &-title {
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    &-bg {
+      background: $bg-gradient-red-text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    &-description {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}

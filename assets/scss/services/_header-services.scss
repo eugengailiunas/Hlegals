@@ -35,6 +35,7 @@
       display: flex;
 
       gap: $gap;
+
       @include sm {
         align-items: center;
       }
@@ -44,11 +45,19 @@
       @include sm {
         display: none;
       }
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     &-img {
       @include sm-min {
         display: none;
+      }
+
+      &:hover {
+        opacity: 0.7;
       }
     }
 
@@ -66,9 +75,11 @@
       @include sm-min {
         font-size: 38px;
       }
+
       @include sm {
         font-size: 19px;
       }
+
       @include sm-min {
         &::after {
           position: absolute;
@@ -86,6 +97,7 @@
           background-size: 40px;
         }
       }
+
       @include sm {
         &::after {
           position: absolute;
@@ -103,6 +115,7 @@
           background-size: 20px;
         }
       }
+
       @include sm-min {
         &::before {
           position: absolute;
@@ -120,6 +133,7 @@
           background-size: 20px;
         }
       }
+
       @include sm {
         &::before {
           position: absolute;
@@ -145,11 +159,13 @@
   &__grid {
     &--alt {
       @extend %container;
+
       @include lg-min {
         padding-top: 50px;
 
         grid-template-areas: "logo actions" "logo menu";
       }
+
       @include lg {
         padding-top: $gap;
 

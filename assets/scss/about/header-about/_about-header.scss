@@ -1,0 +1,129 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.page-header {
+  &--about {
+    min-height: 200px;
+
+    background: none;
+    background-color: rebeccapurple;
+
+    @include lg-min {
+      &::before {
+        bottom: 100%;
+
+        content: "";
+
+        background: none;
+      }
+    }
+
+
+
+    &::after {
+      top: 100%;
+
+      content: "";
+
+      background: none;
+    }
+  }
+
+  &__logo {
+    &-title {
+      &--about {
+        color: $color-gray-bg-text;
+        position: relative;
+
+        display: inline-block;
+
+        margin-left: 10px;
+
+
+        line-height: 1.2;
+
+        @include sm-min {
+          font-size: 38px;
+        }
+
+        @include sm {
+          font-size: 19px;
+        }
+
+        @include sm-min {
+          &::after {
+            position: absolute;
+            top: -7%;
+
+            width: 59px;
+            height: 66px;
+            margin-left: 2px;
+
+            content: "";
+
+            background-image: url(../img/symbol-slash.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40px;
+          }
+        }
+
+        @include sm {
+          &::after {
+            position: absolute;
+            top: -20%;
+
+            width: 30px;
+            height: 33px;
+            margin-left: 2px;
+
+            content: "";
+
+            background-image: url(../img/symbol-slash.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20px;
+          }
+        }
+
+        @include sm-min {
+          &::before {
+            position: absolute;
+            right: 89%;
+            bottom: -130%;
+
+            width: 61px;
+            height: 155px;
+
+            content: "";
+
+            background-image: url(../img/slash-slash.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20px;
+          }
+        }
+
+        @include sm {
+          &::before {
+            position: absolute;
+            top: -122%;
+            right: 95%;
+
+            width: 32px;
+            height: 81px;
+            margin-left: 20px;
+
+            content: "";
+
+            background-image: url(../img/slash-slash.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 12px;
+          }
+        }
+      }
+    }
+
+  }
+}

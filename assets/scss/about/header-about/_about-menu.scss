@@ -1,0 +1,16 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.menu {
+
+  &__link {
+
+    &--about {
+      color: $color-active;
+
+      &:hover {
+        color: $color-active-hover;
+      }
+    }
+  }
+}

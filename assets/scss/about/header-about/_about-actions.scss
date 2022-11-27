@@ -1,0 +1,30 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.actions {
+
+  &--second {
+    @include lg-min {
+      justify-content: flex-end;
+
+      color: $color-white;
+    }
+
+    @include lg {
+      justify-content: space-between;
+
+      color: $color-gray-bg-text;
+    }
+
+  }
+
+  &__locations {
+    &--about {
+      color: $color-gray-bg-text;
+
+      @include lg {
+        display: none;
+      }
+    }
+  }
+}

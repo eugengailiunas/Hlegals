@@ -22,8 +22,8 @@
     content: "";
 
     background: linear-gradient(180deg,
-    rgba(245, 245, 250, 0) 0%,
-    #f5f5fa 86.5%);
+        rgba(245, 245, 250, 0) 0%,
+        #f5f5fa 86.5%);
 
     @media (min-width: 906px) {
       top: 68%;
@@ -79,6 +79,7 @@
       font-size: 32px;
       line-height: 38px;
     }
+
     -webkit-text-fill-color: transparent;
 
     span {
@@ -91,8 +92,9 @@
     @include xs-min {
       column-count: auto;
       column-width: 413px;
-      gap: 40px;
+      gap: $gap-lg;
     }
+
     @include xs {
       display: flex;
       flex-direction: column;
