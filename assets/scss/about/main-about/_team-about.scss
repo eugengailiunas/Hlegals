@@ -1,0 +1,98 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.about-team {
+  position: relative;
+  background-image: url(../img/about-team.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 100px;
+  margin-bottom: 80px;
+
+  @include xl-min {
+    min-height: 440px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+  }
+
+  @include xl-lg {
+    min-height: 400px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  @include lg-md {
+    min-height: 260px;
+    margin-top: 65px;
+    margin-bottom: 50px;
+  }
+
+  @include md-xs {
+    min-height: 220px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  @include xs {
+    min-height: 290px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    width: min(100%, 1320px);
+
+    margin-inline: auto;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 113px;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* White */
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+    text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+
+    @include xl-min {
+      font-size: 96px;
+      letter-spacing: 63px;
+    }
+
+    @include xl-lg {
+      font-size: 76px;
+      letter-spacing: 53px;
+    }
+
+    @include lg-md {
+      font-size: 56px;
+      letter-spacing: 43px;
+    }
+
+    @include md-sm {
+      font-size: 46px;
+      letter-spacing: 30px;
+    }
+
+    @include sm {
+      font-size: 36px;
+      letter-spacing: 20px;
+    }
+  }
+}

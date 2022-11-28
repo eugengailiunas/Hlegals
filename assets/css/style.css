@@ -580,7 +580,7 @@ li :hover {
 
   background-image: url(../img/link-arrow.svg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: contain;
 }
 .team__description {
@@ -1527,6 +1527,10 @@ li :hover {
   color: #0085ff;
 }
 
+.flip {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .flip__container {
   width: min(100% - 40px, 1095px);
 
@@ -1552,10 +1556,6 @@ li :hover {
 }
 .flip__description {
   line-height: 1.43;
-}
-.flip__count {
-  -ms-flex-preferred-size: 400px;
-  flex-basis: 400px;
 }
 .flip__count-wrap {
   display: -webkit-box;
@@ -1591,6 +1591,52 @@ li :hover {
 .flip__count-description {
   font-size: 18px;
   line-height: 21px;
+}
+
+.about-team {
+  position: relative;
+
+  width: 100%;
+  margin: 0;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  padding: 0;
+
+  background-image: url(../img/about-team.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.about-team__container {
+  width: min(100%, 1320px);
+
+  margin-inline: auto;
+}
+.about-team__title {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  left: 50%;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  opacity: 0.8;
+  color: #ffffff;
+  text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+
+  line-height: 113px;
 }
 @media (min-width: 480px) {
   .publication__wrap {
@@ -1767,6 +1813,10 @@ li :hover {
   .flip__description {
     font-size: 21px;
   }
+  .flip__count {
+    -ms-flex-preferred-size: 400px;
+    flex-basis: 400px;
+  }
   .flip__count-wrap {
     border-left: 4px solid #ededf7;
   }
@@ -1908,6 +1958,16 @@ li :hover {
 
     border-radius: 12px 0 0 12px;
   }
+  .about-team {
+    min-height: 440px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+  }
+  .about-team__title {
+    letter-spacing: 63px;
+
+    font-size: 96px;
+  }
 }
 @media (max-width: 1199.8px) and (min-width: 992px) {
   .team__content {
@@ -1919,6 +1979,16 @@ li :hover {
     width: 100%;
 
     border-radius: 12px 0 0 12px;
+  }
+  .about-team {
+    min-height: 400px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  .about-team__title {
+    letter-spacing: 53px;
+
+    font-size: 76px;
   }
 }
 @media (max-width: 991.8px) {
@@ -2008,6 +2078,16 @@ li :hover {
   .companies__grid {
     grid-auto-rows: 120px;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .about-team {
+    min-height: 260px;
+    margin-top: 65px;
+    margin-bottom: 50px;
+  }
+  .about-team__title {
+    letter-spacing: 43px;
+
+    font-size: 56px;
   }
 }
 @media (max-width: 906px) and (min-width: 480px) {
@@ -2156,10 +2236,22 @@ li :hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (max-width: 767.8px) and (min-width: 480px) {
+  .about-team {
+    min-height: 220px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+}
 @media (max-width: 767.8px) and (min-width: 576px) {
   .services__wrap {
     gap: 50px 40px;
     grid-template-columns: 1fr 1fr;
+  }
+  .about-team__title {
+    letter-spacing: 30px;
+
+    font-size: 46px;
   }
 }
 @media (max-width: 575.8px) {
@@ -2306,6 +2398,11 @@ li :hover {
     background-position: center;
     background-size: 12px;
   }
+  .about-team__title {
+    letter-spacing: 20px;
+
+    font-size: 36px;
+  }
 }
 @media (max-width: 479.8px) {
   .publication__wrap {
@@ -2334,6 +2431,11 @@ li :hover {
   }
   .publication-item__desription {
     display: none;
+  }
+  .about-team {
+    min-height: 290px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 419.8px) {

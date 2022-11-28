@@ -16,11 +16,13 @@
       grid-template-areas: "pic link" "pic title" "pic dsc";
       grid-template-rows: 0.5fr 4fr 3fr;
     }
+
     @include xl-lg {
       gap: 0 $gap-lg;
       grid-template-areas: "pic link" "pic title" "pic dsc";
       grid-template-rows: 0.25fr 3fr 0.87fr;
     }
+
     @include lg-md {
       padding: $gap;
       padding: 1em;
@@ -28,6 +30,7 @@
       gap: $gap;
       grid-template-areas: "link" "title" "pic" "dsc";
     }
+
     @include md {
       padding: 1em;
 
@@ -41,20 +44,23 @@
 
     background: $bg-gradient-red-text;
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
 
     font-weight: 700;
     line-height: 1.2;
 
     grid-area: title;
+
     @include md-min {
       font-size: 42px;
     }
+
     @include md {
       font-size: 32px;
     }
+
     -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
+    text-fill-color: transparent;
   }
 
   &__link-team {
@@ -89,7 +95,7 @@
 
       background-image: url(../img/link-arrow.svg);
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: center;
       background-size: contain;
     }
   }
@@ -126,9 +132,11 @@
 
   &__picture {
     grid-area: pic;
+
     @include lg-min {
       margin-bottom: -3px;
     }
+
     @include md {
       text-align: start;
     }
@@ -140,14 +148,17 @@
 
       border-radius: 12px 0 0 12px;
     }
+
     @include xl-lg {
       width: 100%;
 
       border-radius: 12px 0 0 12px;
     }
+
     @include lg-md {
       width: 50%;
     }
+
     @include md {
       display: none;
     }

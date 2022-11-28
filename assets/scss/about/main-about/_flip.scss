@@ -2,6 +2,8 @@
 @use "../../mixins" as *;
 
 .flip {
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   &__container {
     width: min(100% - 40px, 1095px);
@@ -59,7 +61,10 @@
   }
 
   &__count {
-    flex-basis: 400px;
+    @include md-min {
+      flex-basis: 400px;
+
+    }
 
     @include md {
       border-top: 4px solid $color-gray-bg-alt;
