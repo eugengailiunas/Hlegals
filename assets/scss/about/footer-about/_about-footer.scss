@@ -1,0 +1,12 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.page-footer {
+
+  &__content {
+
+    &--about {
+      border-top: 4px solid $color-gray-bg-separator;
+    }
+  }
+}

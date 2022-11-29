@@ -1,0 +1,73 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.quality {
+  @include md-min {
+    padding-bottom: 100px;
+  }
+
+  @include md {
+    padding-bottom: 40px;
+  }
+
+
+  &__container {
+    width: min(100% - 40px, 1095px);
+
+    margin-inline: auto;
+  }
+
+  &__content {
+    display: grid;
+    gap: 40px;
+
+    @include md-min {
+      grid-template-areas: "dsc ttl";
+      grid-template-columns: 1.6fr 1fr;
+      gap: 40px;
+    }
+
+    @include md {
+      grid-template-areas: "dsc" "ttl";
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    grid-area: ttl;
+
+    span {
+      line-height: 50px;
+
+      /* Gradient / Red Text */
+
+      background: $bg-gradient-red-text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+
+      @include md-min {
+        font-size: 42px;
+      }
+
+      @include md {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__description {
+    grid-area: dsc;
+    line-height: 1.43;
+    color: $color-black;
+
+    @include md-min {
+      font-size: 21px;
+    }
+
+    @include md {
+      font-size: 18px;
+    }
+  }
+}
