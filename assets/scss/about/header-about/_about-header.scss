@@ -6,7 +6,7 @@
     min-height: 200px;
 
     background: none;
-    background-color: rebeccapurple;
+
 
     @include lg-min {
       &::before {
@@ -32,7 +32,7 @@
   &__logo {
     &-title {
       &--about {
-        color: $color-gray-bg-text;
+        color: $color-primary;
         position: relative;
 
         display: inline-block;
@@ -125,5 +125,11 @@
       }
     }
 
+  }
+
+  &__actions {
+    &--about {
+      color: $color-gray-bg-separator;
+    }
   }
 }

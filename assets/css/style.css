@@ -475,6 +475,9 @@ li :hover {
 .menu__item--active {
   border-bottom: 1px solid #ffffff;
 }
+.menu__item--second {
+  border-bottom: 2px solid #24a3ff;
+}
 .menu__link {
   color: #ffffff;
 
@@ -1499,7 +1502,6 @@ li :hover {
   min-height: 200px;
 
   background: none;
-  background-color: rebeccapurple;
 }
 .page-header--about::after {
   top: 100%;
@@ -1515,16 +1517,96 @@ li :hover {
 
   margin-left: 10px;
 
-  color: #b3b3ba;
+  color: #323264;
 
   line-height: 1.2;
 }
+.page-header__actions--about {
+  color: #e6e6f0;
+}
 
+.menu__btn {
+  position: relative;
+
+  width: 30px;
+  height: 22.5px;
+  margin: 25px 0 25px auto;
+
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+       -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.menu__btn span {
+  position: absolute;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  -webkit-transition: 0.25s ease-in-out;
+       -o-transition: 0.25s ease-in-out;
+          transition: 0.25s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+
+  opacity: 1;
+  border-radius: 3px;
+  background: #b3b3ba;
+}
+.menu__btn span:nth-child(1) {
+  top: 0;
+
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+}
+.menu__btn span:nth-child(2) {
+  top: 9px;
+
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+}
+.menu__btn span:nth-child(3) {
+  top: 18px;
+
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+}
+.menu__btn.active span:nth-child(1) {
+  top: -1.5px;
+  left: 4px;
+
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.menu__btn.active span:nth-child(2) {
+  width: 0;
+
+  opacity: 0;
+}
+.menu__btn.active span:nth-child(3) {
+  top: 19.5px;
+  left: 4px;
+
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 .menu__link--about {
   color: #24a3ff;
 }
 .menu__link--about:hover {
-  color: #0085ff;
+  color: #f0145a;
 }
 
 .flip {
@@ -1900,6 +1982,9 @@ li :hover {
   .page-footer__copyright-text {
     text-align: right;
   }
+  .menu__btn {
+    display: none;
+  }
   .flip__content {
     -ms-flex-preferred-size: 640px;
     flex-basis: 640px;
@@ -2065,6 +2150,13 @@ li :hover {
 
     background: none;
   }
+  .actions--second {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+
+    color: #b3b3ba;
+  }
   .achievements__grid {
     gap: 40px;
     grid-auto-rows: 110px;
@@ -2189,6 +2281,13 @@ li :hover {
   }
   .menu__list--alt {
     display: none;
+  }
+  .actions--second {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    color: #b3b3ba;
   }
 }
 

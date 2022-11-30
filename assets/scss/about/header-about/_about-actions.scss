@@ -7,7 +7,7 @@
     @include lg-min {
       justify-content: flex-end;
 
-      color: $color-white;
+      color: $color-gray-bg-text;
     }
 
     @include lg {
@@ -16,15 +16,5 @@
       color: $color-gray-bg-text;
     }
 
-  }
-
-  &__locations {
-    &--about {
-      color: $color-gray-bg-text;
-
-      @include lg {
-        display: none;
-      }
-    }
   }
 }
