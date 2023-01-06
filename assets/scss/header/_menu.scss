@@ -2,6 +2,8 @@
 @use "../mixins" as *;
 
 .menu {
+
+
   &__btn {
     position: relative;
 
@@ -86,7 +88,7 @@
     @include md {
       position: absolute;
       top: 0;
-      right: calc(-170px - 20px);
+      right: -100%;
 
       display: none;
 
@@ -98,7 +100,9 @@
     }
 
     &.active {
+
       display: block;
+
     }
   }
 

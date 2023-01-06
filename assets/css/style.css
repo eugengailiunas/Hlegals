@@ -1815,6 +1815,83 @@ li :hover {
   border-top: 4px solid #e6e6f0;
 }
 
+.teammates__title {
+  max-width: 864px;
+  margin: auto;
+  padding-bottom: 80px;
+
+  text-align: center;
+
+  background: -o-linear-gradient(359.87deg, #f0145a 0.84%, #ef8080 99.96%);
+  background:    linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+
+  font-size: 42px;
+  line-height: 50px;
+
+  -webkit-text-fill-color: transparent;
+}
+.teammates__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  padding-bottom: 60px;
+
+  gap: 40px;
+}
+.teammates__item {
+  -ms-flex-preferred-size: 31%;
+  flex-basis: 31%;
+}
+.teammates__image {
+  width: 95%;
+  padding-bottom: 20px;
+}
+.teammates__text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.teammates__name {
+  padding-bottom: 5px;
+
+  color: #323264;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.teammates__position {
+  color: #b3b3ba;
+
+  font-size: 16px;
+  line-height: 22px;
+}
+.teammates__way {
+  position: relative;
+
+  width: 32px;
+  height: 32px;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+  background-color: #f5f5fa;
+}
+.teammates__link {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
 @media (min-width: 480px) {
   .publication__wrap {
     -webkit-column-count: auto;
@@ -1829,7 +1906,6 @@ li :hover {
     border-bottom: 4px solid #e6e6f0;
   }
 }
-
 @media (min-width: 576px) {
   .page-header__logo-img {
     display: none;
@@ -1925,7 +2001,6 @@ li :hover {
     background-size: 20px;
   }
 }
-
 @media (min-width: 768px) {
   .page-header__grid {
     padding-top: 50px;
@@ -2026,13 +2101,11 @@ li :hover {
     display: none;
   }
 }
-
 @media (min-width: 906px) {
   .publication::after {
     top: 68%;
   }
 }
-
 @media (min-width: 992px) {
   .page-header::before {
     position: absolute;
@@ -2172,7 +2245,6 @@ li :hover {
     display: none;
   }
 }
-
 @media (min-width: 1200px) {
   .team__content {
     gap: 0 40px;
@@ -2195,7 +2267,6 @@ li :hover {
     font-size: 96px;
   }
 }
-
 @media (max-width: 1199.8px) and (min-width: 992px) {
   .team__content {
     gap: 0 40px;
@@ -2218,7 +2289,6 @@ li :hover {
     font-size: 76px;
   }
 }
-
 @media (max-width: 991.8px) {
   .page-header__content-image {
     height: 67vh;
@@ -2290,7 +2360,6 @@ li :hover {
     color: #b3b3ba;
   }
 }
-
 @media (max-width: 991.8px) and (min-width: 576px) {
   .grid {
     grid-template-areas: "first first" "snd th" "four fif" "six svn";
@@ -2300,7 +2369,6 @@ li :hover {
     border-radius: 0 0 0 12px;
   }
 }
-
 @media (max-width: 991.8px) and (min-width: 768px) {
   .team__content {
     padding: 20px;
@@ -2341,13 +2409,11 @@ li :hover {
     display: none;
   }
 }
-
 @media (max-width: 906px) and (min-width: 480px) {
   .publication::after {
     top: 90%;
   }
 }
-
 @media (max-width: 767.8px) {
   .page-header__grid {
     padding-top: 20px;
@@ -2357,7 +2423,7 @@ li :hover {
   .menu__list {
     position: absolute;
     top: 0;
-    right: -190px;
+    right: -100%;
 
     display: none;
 
@@ -2508,14 +2574,12 @@ li :hover {
     display: block;
   }
 }
-
 @media (max-width: 767.8px) and (min-width: 420px) {
   .companies__grid {
     grid-auto-rows: 90px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 767.8px) and (min-width: 480px) {
   .about-team {
     min-height: 220px;
@@ -2523,7 +2587,6 @@ li :hover {
     margin-bottom: 40px;
   }
 }
-
 @media (max-width: 767.8px) and (min-width: 576px) {
   .services__wrap {
     gap: 50px 40px;
@@ -2540,7 +2603,6 @@ li :hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 575.8px) {
   .page-header__logo-image {
     display: none;
@@ -2696,7 +2758,6 @@ li :hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 479.8px) {
   .publication__wrap {
     display: -webkit-box;
@@ -2731,7 +2792,6 @@ li :hover {
     margin-bottom: 20px;
   }
 }
-
 @media (max-width: 419.8px) {
   .companies__grid {
     grid-auto-rows: 90px;

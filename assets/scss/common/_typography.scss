@@ -19,7 +19,7 @@ body {
   &.active {
     overflow: hidden;
 
-    transform: translateX(-$mobile-menu-size);
+    transform: translateX(-170px);
 
     &::before {
       position: absolute;
